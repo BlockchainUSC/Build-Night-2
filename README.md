@@ -16,13 +16,10 @@
 - Navigate to the blockchain folder: `cd blockchain`
 
 ### Setting up Hardhat
-- Run the command `npm install -d hardhat@latest @nomicfoundation/hardhat-ethers ethers@6.1.0`
-  - Installs Hardhat, Hardhat plugin for ethers.js, and the ethers.js library
-- Run the command: `npx hardhat init`
-  - Select Typescript Project 
-  - project root is the current directory (hit enter)
-  - add gitignore: y 
-  - Install this sample project’s dependencies with npm: y
+- Run the command: `npx hardhat --init`
+  - Select Hardhat Version 2
+  - Select Typescript Project with Mocha and Ethers.js
+  - Hit enter when prompted to install any necessary dependencies
 
 ### What is Crowdfunding?
 - **Crowdfunding**: a way to raise funds from a large number of people/entities to support a business, project, or even a concept
