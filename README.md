@@ -11,7 +11,6 @@
 - Open the folder that contains the repo for Build Night 2 in Visual Studio Code (or your preferred IDE)
 - Create a new Terminal window by hitting terminal in the top left and clicking new terminal
 - Navigate to the Build Night 2 folder in terminal
-- Type in the command: `cd start` to enter the starting code directory
 - Create a new folder called blockchain: `mkdir blockchain`
 - Navigate to the blockchain folder: `cd blockchain`
 
@@ -276,20 +275,33 @@ Create a function campaign that takes in the campaign id for the campaign
 
 
 ### Update hardhat.config.ts
+
+- Navigate to the blockchain directory in your terminal
+- install dotenv by running the following command: `npm install dotenv`
+- create a .env file in your blockchain folder
+- Add the following information to it (don't include any quotes or spaces)
+```
+PRIVATE_KEY=<YOUR_PRIVATE_KEY>
+SEPOLIA_RPC_URL=<YOUR_SEPOLIA_RPC_URL>
+```
 Update the config function to below code (we will add the endpoint URL Later):
 ```solidity
 // hardhat.config.ts
 import { HardhatUserConfig } from "hardhat/config";
 import "@nomicfoundation/hardhat-toolbox";
+import * as dotenv from "dotenv";
 
-const Private_Key = "YOUR_PRIVATE_KEY";
+dotenv.config();
+
+const PRIVATE_KEY = process.env.PRIVATE_KEY!;
+const SEPOLIA_RPC_URL = process.env.SEPOLIA_RPC_URL!;
 
 const config: HardhatUserConfig = {
   solidity: "0.8.18",
   networks: {
     sepolia: {
-      url: `YOUR_RPC_URL_ENDPOINT`,
-      accounts: [`0x${Private_Key}`],
+      url: SEPOLIA_RPC_URL,
+      accounts: [`0x${PRIVATE_KEY}`],
     },
   },
 };
@@ -351,8 +363,6 @@ You can view your transaction at https://sepolia.etherscan.io/ by copy pasting t
 Navigate to frontend folder in terminal
 
 Run `npm install`
-
-Run `npm install ethers@5`
 
 Run `npm run start` to view current frontend of our page
 
