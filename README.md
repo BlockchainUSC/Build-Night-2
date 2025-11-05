@@ -278,9 +278,10 @@ Create a function campaign that takes in the campaign id for the campaign
 ### Update hardhat.config.ts
 
 - Navigate to the blockchain directory in your terminal
-- install dotenv by running the following command: `npm install dotenv`
+- Install dotenv by running the following command: `npm install dotenv`
 - create a .env file in your blockchain folder
 - Add the following information to it (don't include any quotes or spaces)
+- Add blockchain/.env to your .gitignore file (in the project root)
 ```
 PRIVATE_KEY=<YOUR_PRIVATE_KEY>
 SEPOLIA_RPC_URL=<YOUR_SEPOLIA_RPC_URL>
