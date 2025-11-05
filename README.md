@@ -263,6 +263,7 @@ function getCampaign(uint _id) external view returns(address creator,
 
             return (campaign.creator, campaign.goal, campaign.pledged, campaign.startAt, campaign.endAt, campaign.claimed);
     }
+}
 
 ```
 
