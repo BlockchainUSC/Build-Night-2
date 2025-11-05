@@ -17,7 +17,7 @@
 ### Setting up Hardhat
 - Run the command: `npx hardhat --init`
   - Select Hardhat Version 2
-  - Select Typescript Project with Mocha and Ethers.js
+  - Select **Typescript** Project with Mocha and Ethers.js
   - Hit enter when prompted to install any necessary dependencies
 
 ### What is Crowdfunding?
@@ -311,7 +311,6 @@ const config: HardhatUserConfig = {
 export default config;
 
 ```
-*Inside of hardhat.config.ts, add your private key as a string (enclose it in quotes)*
 
 Follow [slides](https://docs.google.com/presentation/d/1xdg0rA4LAnQ_z0KawWPDZ7PYjTHXLxOPf_et7FiCZI8/edit?usp=sharing) for instructions on how to get Sepolia Test ETH, create Alchemy RPC Endpoint, and access your private key.
 
